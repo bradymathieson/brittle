@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @britt.content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @britt.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_britt_path(@britt) %> |
+<%= link_to 'Back', britts_path %>

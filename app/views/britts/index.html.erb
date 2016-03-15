@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Britts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @britts.each do |britt| %>
+      <tr>
+        <td><%= britt.content %></td>
+        <td><%= britt.user_id %></td>
+        <td><%= link_to 'Show', britt %></td>
+        <td><%= link_to 'Edit', edit_britt_path(britt) %></td>
+        <td><%= link_to 'Destroy', britt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Britt', new_britt_path %>
